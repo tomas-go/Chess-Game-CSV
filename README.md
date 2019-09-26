@@ -3,6 +3,7 @@
 For this program all pieces of a chess game have been implemented with their movement and capture abilities. Moves that are illegal for the selected piece will not be done and will ask the user to enter a valid command. All movements are updated in "board.csv" using low-level reads and writes. 
 ## How to Play
 All commands are to be made through the command line. 
+Whichever color captures the opponent's king wins.
 ### Commands
 - show
     * `show`
@@ -20,4 +21,7 @@ All commands are to be made through the command line.
 - skip
     * `skip`
     * Skips the current player's turn and switches to the opponent's turn.
+- exit
+    * `exit`
+    * Ends the game.
 
