@@ -1,9 +1,5 @@
-/* For this program all pieces of a chess game have been implemented with their movement and capture abilities. 
-    All movements are updated in "board.csv" using low-level reads and writes. The only feature not implemented for a complete 
-    chess game is a win condition. */
 //
 //  main.c
-//  Assignment 5 - System Calls
 //
 //  Created by Tomas Gonzalez on 7/17/18.
 //  Copyright © 2018 Tomas Gonzalez. All rights reserved.
