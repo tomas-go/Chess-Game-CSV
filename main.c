@@ -69,7 +69,7 @@ int main()
                 if((c1 >= 'a' && 'h' >= c1) && (d1 >= 'a' && 'h' >= d1) && (c2 >= 1 && 8 >= c2) && (d2 >= 1 && 8 >= d2))
                        capturePiece(t, c1, c2, d1, d2, file);
                 else
-                       printf("ERROR: Please enter a valid command\n");
+                    printf("ERROR: Please enter a valid command\n");
             }
             else
                 printf("ERROR: Please enter a valid command\n");
@@ -100,24 +100,30 @@ int main()
 /* Prints the full contents of board.csv in .tl5 format.   */
 void show()
 {
-    FILE *board = fopen("board.csv", "r");
+    FILE *board;
+    board = fopen("board.csv", "r");
     int rows = 8;
     
     if(board == NULL)
-        printf("ERROR\n");
-    
-    printf("\t %-5.5s %-5.5s %-5.5s %-5.5s %-5.5s %-5.5s %-5.5s %-5.5s\n", "a", "b", "c", "d", "e", "f","g", "h");
-    char line[100];
-    while(fgets(line, 100, board) != NULL)
     {
-        printf("%d\t|", rows--);
-        char *word = strtok(line, " |.,\n");
-        while(word != NULL)
+        printf("ERROR: board.csv appears to be empty.\n");
+        exit(1);
+    }
+    else
+    {
+        printf("\t %-5.5s %-5.5s %-5.5s %-5.5s %-5.5s %-5.5s %-5.5s %-5.5s\n", "a", "b", "c", "d", "e", "f","g", "h");
+        char line[100];
+        while(fgets(line, 100, board) != NULL)
         {
-            printf("%-5.5s|", word);
-            word = strtok(NULL, " |.,\n");
+            printf("%d\t|", rows--);
+            char *word = strtok(line, " |.,\n");
+            while(word != NULL)
+            {
+                printf("%-5.5s|", word);
+                word = strtok(NULL, " |.,\n");
+            }
+            printf("\n");
         }
-        printf("\n");
     }
     fclose(board);
 }
