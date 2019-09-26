@@ -17,4 +17,7 @@ All commands are to be made through the command line.
     * Moves a piece the current player can use to a location with a piece belonging to the opponent. x is the column letter of the player's piece, y is the column letter of the opponent's piece, with 0 being each piece's respective row number. 
     * Ex: `cp h1 h7`
         * With h2-h6 being empty, the white rook at h1 would capture the black pawn at h7.
+- skip
+    * `skip`
+    * Skips the current player's turn and switches to the opponent's turn.
 
