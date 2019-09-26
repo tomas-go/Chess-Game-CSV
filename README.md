@@ -6,6 +6,13 @@ All commands are to be made through the command line.
 ### Commands
 - show
     * `show`
-    * Any player can use this.
     * Shows the current board.
+- move
+    * `mv x0 y0`
+    * Moves a piece that the current player can use. x is the column letter of the player's piece, y is the column letter of the space to move the piece to, with 0 being each spaces respective row number. 
+    * Ex: `mv a2 a4`
+        * This moves the white pawn at a2 two spaces forward to a4.
+- capture
+    * `cp x0 y0`
+    * 
 
