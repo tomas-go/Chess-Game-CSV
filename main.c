@@ -412,13 +412,12 @@ void capturePiece(int *turn, char mine1, int mine2, char opp1, int opp2, int fp)
             }
         }
     }
-    /*
-    if() // if king is captured, game over.
+    printf("%d\n", (p2[1]-48));
+    if((p2[1]-48) == 6) // if king is captured, game over.
     {
         printf("%s wins. %s king was captured.", getTurn(turn), getTurn(turn+1));
         exit(0);
     }
-     */
     printf("Captured piece at %c%d from %c%d.\n", opp1, opp2, mine1, mine2);
     switchTurn(turn);
 }
