@@ -29,12 +29,12 @@ int calculate(char, int);
 void update(int, int, int);
 
 enum pieces {pawn = 1, knight, bishop, rook, queen, king};
-enum color {WHITE = 0, BLACK};
+enum color {WHITE = 1, BLACK = -1};
 
 
 int main()
 {
-    int turn = 0;    //0 = white, 1 = black, game starts with white going first as default
+    int turn = 1;    //1 = white, -1 = black, game starts with white going first as default
     
     int *t = &turn;
 
@@ -412,6 +412,13 @@ void capturePiece(int *turn, char mine1, int mine2, char opp1, int opp2, int fp)
             }
         }
     }
+    /*
+    if() // if king is captured, game over.
+    {
+        printf("%s wins. %s king was captured.", getTurn(turn), getTurn(turn+1));
+        exit(0);
+    }
+     */
     printf("Captured piece at %c%d from %c%d.\n", opp1, opp2, mine1, mine2);
     switchTurn(turn);
 }
@@ -632,10 +639,13 @@ void update(int fp, int from, int to)
 /* Switches the value at t to 0 or 1. 0 = WHITE, 1 = BLACK. The function will always switch to the other one.   */
 void switchTurn(int *t)
 {
+    *t *= -1;
+    /*
     if(*t == WHITE)
         (*t)++;
     else
         (*t)--;
+     */
 }
 
 /* Returns which color is allowed to go. */
