@@ -4,7 +4,8 @@ For this program all pieces of a chess game have been implemented with their mov
 ## How to Play
 All commands are to be made through the command line. 
 ### Commands
-- `show`
+- show
+    * `show`
     * Any player can use this.
     * Shows the current board.
 
