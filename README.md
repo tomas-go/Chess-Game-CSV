@@ -24,4 +24,10 @@ Whichever color captures the opponent's king wins.
 - exit
     * `exit`
     * Ends the game.
+## Features To Be Added
+* Check - warning for when king is in danger of being captured.
+* reset
+    * `reset`
+    * Resets the all pieces on board to starting position.
+* Illegal moves for king when enemies are needed.
 
